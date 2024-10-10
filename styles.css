@@ -5,8 +5,8 @@ body {
 }
 
 header {
-    background-color: #4CAF50;
-    color: white;
+    background-color: #f0f8ff;
+ /*   color: white; */
     padding: 10px 0;
     text-align: center;
 }
@@ -22,7 +22,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: white;
+/*  color: white;  */
     text-decoration: none;
 }
 
@@ -45,3 +45,10 @@ footer {
     display: inline;
     margin: 0 10px;
 }
+
+.social-icon {
+	width: 40px; /* Adjust size as needed */
+	height: 40px; /* Adjust size as needed */
+	margin: 10px;
+}
+
