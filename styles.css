@@ -7,8 +7,14 @@ body {
 header {
     background-color: #f0f8ff;
  /*   color: white; */
-    padding: 10px 0;
+	color: rgb(153, 102, 51);  /*sun sprouts color */
     text-align: center;
+	gap: 0;
+}
+
+.logo {
+    width: 250px;
+    height: auto;  /* Maintains aspect ratio */
 }
 
 nav ul {
@@ -34,6 +40,48 @@ footer {
     background-color: #f1f1f1;
     padding: 10px 0;
     text-align: center;
+}
+/* CSS for inquiry form */
+form {
+    max-width: 500px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background: #f9f9f9;
+}
+
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input, textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background: #0056b3;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #003f7f;
+}
+/*end css for inquiry form*/
+
+.note {
+    font-size: 0.9em;
+    color: #666;
 }
 
 .social-media {

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sun Sprouts</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+		<div class="header-container">
+		<!-- Logo Image -->
+		<img src="logo7.png" alt="Let's Talk Health! Logo" class="logo">
+		</div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="terms.html">Terms</a></li>
+				<li><a href="privacy.html">Privacy</a></li>
+				<li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script>
+        // Function to handle form submission and construct the GET URL
+        function submitForm(event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Collect form data
+            const fullName = encodeURIComponent(document.getElementById("entry.1019028055").value);
+            const email = encodeURIComponent(document.getElementById("entry.415375411").value);
+            const requestType = encodeURIComponent(document.getElementById("entry.411504649").value);
+            const details = encodeURIComponent(document.getElementById("entry.1732219654").value);
+
+            // Set the action URL for the POST request to the Google Form submission URL
+            const formActionURL = `https://docs.google.com/forms/d/e/1FAIpQLScey84n2-iCVGlH1xuq_yOpCmQ-w_hKbRiDHqK4WXK93tu1vg/
+			formResponse?&submit=Submit?usp=pp_url&entry.1019028055=${fullName}&entry.415375411=${email}&entry.411504649=${requestType}&entry.1732219654=${details}`;
+			
+
+            // Send the POST request using Fetch API. for some reason google does not send back a response.ok so there we cannot if and then after fetch
+            fetch(formActionURL, {method: 'POST'})
+			window.location.href = "submission.html"; // Replace with your success page URL
+
+        }
+    </script>
+    <main>
+		<h1>Contact Us</h1>
+		<p>If you have questions or concerns please complete the form below. Note that all fields are required to ensure proper processing of your request.</p>
+		    <!-- Form submission via JavaScript -->
+		<form id="contactForm" onsubmit="submitForm(event)">
+		
+			<label for="entry.1019028055">Full Name</label>
+			<input type="text" id="entry.1019028055" name="entry.1019028055" required>
+
+			<label for="entry.415375411">Email Address</label>
+			<input type="email" id="entry.415375411" name="entry.415375411" required>
+
+			<label for="entry.411504649">Type of Request</label>
+			<select id="entry.411504649" name="entry.411504649" required>
+				<option value="">-- Select an Option --</option>
+				<option value="general-inquiry">General Inquiry</option>
+				<option value="privacy-rights">Privacy Rights Inquiry</option>
+				<option value="data-deletion">Request Data Deletion</option>
+			</select>
+
+			<label for="entry.1732219654">Details of Your Request</label>
+			<textarea id="entry.1732219654" name="entry.1732219654" rows="5" required></textarea>
+
+			<div class="note">
+				<p><strong>Note:</strong> If your request involves data deletion or privacy rights under the CCPA, you may be required to verify your identity. Processing may take up to 45 days as permitted by California law.</p>
+			</div>
+
+			<button type="submit">Submit Request</button>
+		</form>
+</body>
+    </main>
+
+    <footer>
+        <p>Follow us on:</p>
+        <ul class="social-media">
+            <li><a href="https://www.youtube.com/@sunsprouts1" target="_blank">YouTube</a></li>
+            <li><a href="https://www.tiktok.com/@sunsprouts1" target="_blank">TikTok</a></li>
+            <li><a href="https://instagram.com/sunsprouts1" target="_blank">Instagram</a></li>
+        </ul>
+        <p>&copy; 2024 Sun Sprouts. All rights reserved.</p>
+    </footer>
+</body>
+</html>
